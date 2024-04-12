@@ -6,6 +6,7 @@ import css from './index.css';
 import Footer from './components/Footer';
 
 const App = () => {
+
   return (
     <>
     <Navbar/>

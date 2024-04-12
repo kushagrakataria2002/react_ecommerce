@@ -3,8 +3,24 @@ import iphone from '../images/iphone_red.png';
 import mobile from '../images/mobile.png'; 
 import android_mobile from '../images/samsung_mobile.jpg'; 
 import men_clothes from '../images/men_clothes.png'; 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Content = () => {
+
+  const show_error = () =>{
+    toast.warn('our cart page is under construction', {
+      position: "top-center",
+      autoClose: 7000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      }); 
+  }
+
   return (
     <>
     <div className="mx-auto max-w-screen-lg">
@@ -13,7 +29,7 @@ const Content = () => {
     {/* card1 */}
 
     <article className="relative">
-      <div className="aspect-square overflow-hidden transition-all duration-700 hover:scale-110 ">
+      <div className="aspect-square overflow-hidden transition-all duration-700 hover:scale-110 " onClick={show_error}>
         <img
           className="h-full w-full object-cover transition-all duration-300 group-hover:scale-125"
           src={iphone}
@@ -41,7 +57,7 @@ const Content = () => {
     {/* card2 */}
 
     <article className="relative">
-      <div className="aspect-square overflow-hidden transition-all duration-700 hover:scale-110 ">
+      <div className="aspect-square overflow-hidden transition-all duration-700 hover:scale-110 " onClick={show_error}>
         <img
           className="h-full w-full object-cover  transition-all duration-300 group-hover:scale-125"
           src={android_mobile}
@@ -69,7 +85,7 @@ const Content = () => {
     {/* card3 */}
 
     <article className="relative">
-      <div className="aspect-square overflow-hidden transition-all duration-700 hover:scale-110 ">
+      <div className="aspect-square overflow-hidden transition-all duration-700 hover:scale-110 " onClick={show_error}>
         <img
           className="h-full w-full object-cover transition-all duration-300 group-hover:scale-125"
           src={mobile}
@@ -97,7 +113,7 @@ const Content = () => {
     {/* card4 */}
 
     <article className="relative">
-      <div className="aspect-square overflow-hidden transition-all duration-700 hover:scale-110">
+      <div className="aspect-square overflow-hidden transition-all duration-700 hover:scale-110" onClick={show_error}>
         <img
           className="h-full w-full object-cover transition-all duration-300 group-hover:scale-125"
           src={men_clothes}
@@ -124,6 +140,18 @@ const Content = () => {
 
   </main>
 </div>
+<ToastContainer
+theme="colored"
+position="top-center"
+autoClose={7000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+/>
     </>
   )
 }
